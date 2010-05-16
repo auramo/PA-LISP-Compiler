@@ -1,0 +1,18 @@
+(defun retfalse ()
+  0)
+
+(defun rettrue ()
+  1)
+
+(if (or (retfalse) (retfalse))
+    (println 1)
+    (println 2))
+(if (or (retfalse) (rettrue))
+    (println 1)
+    (println 2))
+(if (and (retfalse) (rettrue))
+    (println 1)
+    (println 2))
+(if (and (rettrue) (rettrue))
+    (println 1)
+    (println 2))

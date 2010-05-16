@@ -1,0 +1,4 @@
+(defun kukka()
+	(if 1 998))
+
+(println (kukka))

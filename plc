@@ -1,0 +1,15 @@
+#!/bin/bash
+# Bail out on error:
+set -e
+if [ -z "$1" ]; then
+   echo usage: $0 sourcefile.pal
+   exit
+fi
+source=$1
+rootdir=`dirname $0`
+#Create jasmin file
+ruby -I ${rootdir}/lib ${rootdir}/lib/plc.rb $source
+#Assemble class from jasmin file
+no_suffix=${source%.pal}
+no_path_prefix_or_suffix=${no_suffix##*/}
+java -jar ${rootdir}/tools/jasmin.jar ${no_path_prefix_or_suffix}.j

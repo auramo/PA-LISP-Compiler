@@ -1,0 +1,30 @@
+
+; This program tries to test calculations, ifs and
+; comparison functions with ifs. It's the largest
+; test program in the testdata (not that large either :-))
+
+(defun greater_than (a b)
+       (> a b))
+
+(defun multiple_divide (a b)
+       (/ (* a b) 10))
+
+(println "(3*50)/10 should be 15. Output:")
+(println (multiple_divide 50 3))
+(println "check for equality with 15")
+
+(if (= 15 (multiple_divide 50 3))
+    (println "15 as expected")
+    (println "expected 15 but wasn't"))
+
+(println "is 4 bigger than 5?")
+
+(if (greater_than 4 5)
+    (println "yes")
+    (println "no"))
+
+(println "is 10 bigger than 9?")
+
+(if (greater_than 10 9)
+    (println "yes")
+    (println "no"))

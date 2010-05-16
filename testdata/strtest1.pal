@@ -1,0 +1,4 @@
+(defun retstr ()
+       "hello")
+
+(println (retstr))

@@ -1,0 +1,10 @@
+#!/bin/bash  
+# Bail out on error:
+set -e
+if [ -z "$1" ]; then
+   echo usage: $0 palisp-program
+   echo "program should be given without the .class suffix"
+   exit
+fi
+rootdir=`dirname $0`
+java -cp ${rootdir}/palisp-runtime/bin:. $1

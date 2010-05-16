@@ -1,0 +1,4 @@
+(defun f1 (a b)
+	(+ a b))
+	
+(println (f1 1 2))
